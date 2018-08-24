@@ -1,0 +1,14 @@
+.form {
+  padding: 10px;
+  box-shadow: 5px 10px 8px #888888;
+  width: 20%;
+  margin-top: 16%;
+  margin-left: 38%;
+  opacity: 133.5;
+  background: linear-gradient( rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5));
+  padding: 3%;
+}
+
+/* body {
+  background: url("img/background.jpg");
+} */
