@@ -4,14 +4,14 @@
       <form>
         Sample File:
         <br>
-        <input type="file" name="samplefile" value="sample" accept=".xlsx">
+        <input type="file" id="files1" name="samplefile" value="sample" accept=".xlsx">
         <br>
         <br> Global Marketing:
         <br>
         <input type="file" id="files" name="globalmarket" value="global" accept=".xlsx">
         <br>
         <br>
-        <input class="btn btn-success" style="background-color: rgb(136, 136, 196)" (click)="excel()" value="Upload">
+        <input class="btn btn-success" (click)="excel()||exec()" value="Upload">
       </form>
     </div>
   </div>

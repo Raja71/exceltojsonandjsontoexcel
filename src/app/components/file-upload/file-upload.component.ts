@@ -12,24 +12,46 @@ export class FileUploadComponent implements OnInit {
   constructor() {}
 
   excel(event){
-    var input: any = document.getElementById("files")
-    var files = input.files;
-    var reader = new FileReader();
-    var fileData = new Blob([files[0]]);
+    let input: any = document.getElementById("files")
+    let files = input.files;
+    let reader = new FileReader();
+    let fileData = new Blob([files[0]]);
     reader.readAsArrayBuffer(fileData);
     reader.onload = function() {
-      var arrayBuffer = reader.result
-      var data = new Uint8Array(arrayBuffer);
-      var arr = new Array();
-    for(var i = 0; i != data.length; ++i){ 
+      let arrayBuffer = reader.result
+      let data = new Uint8Array(arrayBuffer);
+      let arr = [];
+    for(let i = 0; i != data.length; ++i){ 
       arr[i] = String.fromCharCode(data[i]);
     }
-    var bstr = arr.join("");
-    var workbook = XLSX.read(bstr, {type:"binary"});
-    var first_sheet_name = workbook.SheetNames[0];
-    var worksheet = workbook.Sheets[first_sheet_name]; 
-    var json = XLSX.utils.sheet_to_json(worksheet);
-    var jsonOut = JSON.stringify(json);
+    let bstr = arr.join("");
+    let workbook = XLSX.read(bstr, {type:"binary"});
+    let first_sheet_name = workbook.SheetNames[0];
+    let worksheet = workbook.Sheets[first_sheet_name]; 
+    let json = XLSX.utils.sheet_to_json(worksheet);
+    let jsonOut = JSON.stringify(json);
+    console.log("test"+jsonOut);
+    }
+  }
+  exec(event){
+    let input: any = document.getElementById("files1")
+    let files = input.files;
+    let reader = new FileReader();
+    let fileData = new Blob([files[0]]);
+    reader.readAsArrayBuffer(fileData);
+    reader.onload = function() {
+      let arrayBuffer = reader.result
+      let data = new Uint8Array(arrayBuffer);
+      let arr = [];
+    for(let i = 0; i != data.length; ++i){ 
+      arr[i] = String.fromCharCode(data[i]);
+    }
+    let bstr = arr.join("");
+    let workbook = XLSX.read(bstr, {type:"binary"});
+    let first_sheet_name = workbook.SheetNames[0];
+    let worksheet = workbook.Sheets[first_sheet_name]; 
+    let json = XLSX.utils.sheet_to_json(worksheet);
+    let jsonOut = JSON.stringify(json);
     console.log("test"+jsonOut);
     }
   }
