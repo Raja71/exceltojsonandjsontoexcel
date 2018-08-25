@@ -1,20 +1,18 @@
-<html>
-<body>
-  <div class="background">
-    <div class="form" style="background-color: aquamarine">
+<div class="col-12 mt-5">
+  <div class="col-offset-4 mt-5 container-fluid col-4 form" style="background-color: aquamarine">
+    <div class="">
       <form>
-       Sample File:
+        Sample File:
         <br>
-        <input type="file" (change)="incomingfile($event)" name="samplefile" value="sample" accept=".xlsx">
+        <input type="file" name="samplefile" value="sample" accept=".xlsx">
         <br>
         <br> Global Marketing:
         <br>
-        <input type="file" (change)="incomingfile($event)" name="globalmarket" value="global" accept=".xlsx">
+        <input type="file" id="files" name="globalmarket" value="global" accept=".xlsx">
         <br>
         <br>
-        <input type="submit" class="btn btn-success" style="background-color: rgb(136, 136, 196)" (click)="excel()" value="Upload">
+        <input class="btn btn-success" style="background-color: rgb(136, 136, 196)" (click)="excel()" value="Upload">
       </form>
     </div>
   </div>
-</body>
-</html>
+</div>
