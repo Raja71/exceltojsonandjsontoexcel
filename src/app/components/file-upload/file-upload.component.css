@@ -1,6 +1,9 @@
 .form {
-  padding: 10px;
+  padding: 20px;
   box-shadow: 5px 10px 8px #888888;
   opacity: 133.5;
-  background: linear-gradient( rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5));
+  background: linear-gradient( rgba(158, 248, 162, 0.75), rgba(159, 170, 6, 0.75));
+}
+.container {
+  max-width: 471px;
 }
