@@ -14,7 +14,7 @@ export class FileUploadService {
 
     let headers: HttpHeaders = new HttpHeaders()
     headers = headers.append('Content-Type', 'application/json')
-
+  
     if(header) {
         for (let key in header) {
             let type = typeof(header[key])
