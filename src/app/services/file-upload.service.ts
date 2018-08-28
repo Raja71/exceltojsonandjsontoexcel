@@ -25,6 +25,7 @@ export class FileUploadService {
             }
         }
     }
+
     let httpOptions = {
         headers: headers
     }
