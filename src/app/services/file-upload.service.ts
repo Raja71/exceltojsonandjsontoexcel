@@ -38,7 +38,7 @@ export class FileUploadService {
     let httpOptions = {
         headers: headers
     }
-    alert(JSON.stringify(jsonData))
+    console.log(JSON.stringify(jsonData))
     return this.http.post< any >('/url/here', JSON.stringify(jsonData), httpOptions)
   }
 }

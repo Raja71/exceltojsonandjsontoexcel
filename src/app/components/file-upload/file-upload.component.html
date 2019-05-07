@@ -6,11 +6,7 @@
         <label for="samplefile">Sample File:</label>
         <input type="file" class="form-control" id="samplefile" name="samplefile" value="sample" accept=".xlsx">
       </div>
-      <div class="form-group">
-        <label for="globalmarket">Global Marketing:</label>
-        <input type="file" class="form-control" id="globalmarket" name="globalmarket" value="global" accept=".xlsx">
-      </div>
-      <input class="btn btn-primary btn-block" (click)="excel()" value="Upload">
+      <button class="btn btn-primary btn-block" (click)="excel()" value="Upload" ng-disabled="slideForm.$invalid">Upload</button>
     </form>
   </div>
 </div>
